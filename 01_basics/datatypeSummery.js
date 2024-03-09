@@ -32,3 +32,25 @@ const myFunction= function(){}
 console.log("hellow world");
 
 console.log(typeof(myFunction));
+
+//******************************* 
+//memory: stack(in this we get a cpy of datatype and we do modification on that) 
+//    heap(non-primitive type) if we do any modification we perform on the reffrence of the datatype 
+//it has direct imapct on our datatyps
+
+let myYoutubeName = "devYoutube"
+let anothername = myYoutubeName
+anothername = "devil"
+console.log(anothername);
+console.log(myYoutubeName);
+//in above we change over in copy so our original value is not reflected
+let user1 ={
+    email:"user@gmail.com",
+    upi:"user@ybl"
+}
+let user2 = user1
+ user2.email = "user2@gmail.com"
+ //in this as our datatype is non primitive type we perform any task on reffrence basis, so reflection shows in original data
+
+ console.log(user1.email);
+ console.log(user2.email);
